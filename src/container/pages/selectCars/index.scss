@@ -1,0 +1,109 @@
+@include o('select-cars') {
+    display: flex;
+    height: 100%;
+    background: #ccc;
+    flex-direction: column;
+
+    @include e('tabs-container') {
+        height: 100%;
+        flex: 1;
+    }
+
+    @include e('tabs') {
+        background: #ccc;
+
+        @include e('no-data-text') {
+            color: $black02;
+            font-size: $font-size2;
+        }
+    }
+
+    @include e('no-data') {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include e('rank-car') {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-bottom: 30px;
+
+        @include e('rank-car-text') {
+            width: 80%;
+            height: 80px;
+            background: #4caf50;
+            color: #fff;
+            text-align: center;
+            border-radius: 40px;
+            font-size: 30px;
+            line-height: 80px;
+        }
+    }
+}
+
+@include o('car-list-item') {
+    display: flex;
+    height: 84px;
+    padding: 0 0 0 10px;
+    margin: 0 $margin3 $margin3;
+    border: 4px solid #fff;
+    background: #fff;
+    overflow: hidden;
+    justify-content: space-between;
+    border-radius: 50px;
+    align-items: center;
+
+    @include e('avatar') {
+        width: 60px;
+        height: 60px;
+    }
+
+    @include e('tips') {
+        color: #ccc;
+        text-align: center;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    @include e('progress') {
+        display: flex;
+        padding: 0 40px;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+
+        @include e('power') {
+            margin-bottom: 10px;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+
+    @include e('num') {
+        display: flex;
+        width: 180px;
+        height: 84px;
+        border: 0;
+        background: #ccc;
+        background: linear-gradient(110deg, transparent 30px, #000 0) top left;
+        color: #fff;
+        border-top-right-radius: 36px;
+        border-bottom-right-radius: 36px;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @include m('active') {
+        border: 4px solid green;
+    }
+}

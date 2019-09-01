@@ -1,0 +1,120 @@
+@include o('select-return-position') {
+    height: 100%;
+    background: $bg-color;
+    background: #fff;
+    overflow: hidden;
+
+    @include e('search') {
+        margin-bottom: 10px;
+
+        @include e('seacrh-bar') {
+            height: 100%;
+
+            .at-search-bar__input-cnt {
+                height: 100%;
+                align-items: center;
+                align-content: center;
+
+                input {
+                    height: 100% !important;
+                    padding: 0 67px;
+                }
+            }
+        }
+    }
+
+    @include e('value-box') {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(#fff, 0.5);
+        background: $bg-color;
+        margin-bottom: 20px;
+        z-index: 1;
+
+        @include e('value-box-item') {
+            height: 100px;
+            padding: 10px 30px;
+            background: #fff;
+            border-bottom: 1px solid $border-color;
+
+            @include e('title') {
+                color: $title-color;
+            }
+
+            @include e('address') {
+                color: $description-color;
+            }
+        }
+
+        @include m('show') {
+            display: block;
+        }
+
+        @include m('hide') {
+            display: none;
+        }
+    }
+
+    @include e('item') {
+        display: flex;
+        padding: 20px;
+        background: #fff;
+        min-height: 90px;
+        border-bottom: 1px solid $border-color;
+        justify-content: space-between;
+        align-items: center;
+
+        @include e('area') {
+            width: 80px;
+            padding: 4px;
+            border: 1px solid $border-color;
+            color: $description-color;
+            font-size: 26px;
+            border-radius: 8px;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        @include e('position') {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+
+            @include e('station-name') {
+                color: $title-color;
+                font-size: 30px;
+                margin-bottom: 4px;
+            }
+
+            @include e('location') {
+                color: $description-color;
+                font-size: 26px;
+            }
+        }
+
+        @include e('port-nums') {
+            display: flex;
+            width: 120px;
+            color: $title-color;
+            margin-left: 20px;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 30px;
+
+            @include e('p') {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                background: $shadow-color;
+                color: $description-color;
+                font-size: 25px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

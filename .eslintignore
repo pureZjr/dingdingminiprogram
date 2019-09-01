@@ -1,0 +1,4 @@
+config/*
+src/utils/*
+src/**/*.d.ts
+src/components/Map/qqmap-wx-jssdk.min.js

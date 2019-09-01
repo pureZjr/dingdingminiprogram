@@ -1,0 +1,19 @@
+@include o('edit-name') {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include e('input') {
+        height: 76px;
+        border-bottom: 1px solid $blue06;
+        flex: 1;
+        margin-left: 24px;
+    }
+
+    @include e('btn') {
+        margin: 0 24px;
+        background: $blue;
+        color: #fff;
+    }
+}

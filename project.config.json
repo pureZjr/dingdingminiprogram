@@ -1,0 +1,91 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "tarodingdong",
+	"description": "dingdong",
+	"appid": "wx13750ec250a0c16d",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"libVersion": "2.8.0",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": 0,
+					"name": "home",
+					"pathName": "container/pages/home/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "选车",
+					"pathName": "container/pages/selectCars/index",
+					"query": "id=25&seat=0&token=androidv183v7e11be7d2ebf4ca7b1ff536aee94ffcc",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "我的",
+					"pathName": "container/pages/userInfo/index",
+					"query": "token=androidv183v7e11be7d2ebf4ca7b1ff536aee94ffcc",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "选择还车",
+					"pathName": "container/pages/selectReturnPosition/index",
+					"query": "token=androidv183v3f91e7f976ff4215905f99c0686c046a",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "container/pages/login/index",
+					"query": "token=androidv183v3f91e7f976ff4215905f99c0686c046a",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "月度账单",
+					"pathName": "container/pages/orderHistory/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

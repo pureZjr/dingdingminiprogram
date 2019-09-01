@@ -1,0 +1,4 @@
+{
+  "templatepath": "./config/CustomTemplate",
+  "componentPlacementPath": "src"
+}

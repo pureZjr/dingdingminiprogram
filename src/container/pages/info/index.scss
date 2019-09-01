@@ -1,0 +1,51 @@
+@include o('info') {
+    display: flex;
+    flex-direction: column;
+
+    @include e('title') {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        color: $black08;
+        font-size: $font-size4;
+        align-items: center;
+    }
+
+    @include e('item') {
+        display: flex;
+        padding: 0 12px;
+        color: $black06;
+        align-items: center;
+        margin-bottom: 24px;
+
+        @include e('label') {
+            width: 180px;
+            color: $black08;
+            font-size: $font-size2;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        @include e('value') {
+            flex: 1;
+        }
+    }
+
+    @include e('msg') {
+        display: flex;
+        padding: 0 24px;
+        flex-direction: column;
+    }
+
+    @include e('cart') {
+        display: flex;
+        padding: 0 24px;
+        flex-direction: column;
+        align-items: center;
+
+        @include e('img') {
+            width: 80%;
+            margin-bottom: 24px;
+        }
+    }
+}

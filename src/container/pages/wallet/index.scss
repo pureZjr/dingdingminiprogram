@@ -1,0 +1,24 @@
+@include o('wallet') {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    @include e('item') {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        border: 1px solid $black01;
+        align-items: center;
+        justify-content: space-between;
+
+        @include e('label') {
+            color: $black08;
+            padding-left: 24px;
+        }
+
+        @include e('value') {
+            color: $black06;
+            padding-right: 24px;
+        }
+    }
+}
