@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { AtTabs, AtTabsPane } from 'taro-ui'
+import { AtTabs, AtTabsPane, AtMessage } from 'taro-ui'
 import { View, ScrollView, Button, Image, Text } from '@tarojs/components'
 import { observer, inject } from '@tarojs/mobx'
 import '@tarojs/async-await'
@@ -154,6 +154,13 @@ export default class SelectCars extends Component<
         )
     }
 
+    renkCar = () => {
+        Taro.atMessage({
+            message: '功能开发中',
+            type: 'success',
+        })
+    }
+
     renderNoCarList = () => {
         const { containerHeight } = this.state
         return (
@@ -216,10 +223,12 @@ export default class SelectCars extends Component<
                     <Button
                         className={classes('rank-car-text')}
                         disabled={!this.state.currentCarId}
+                        onClick={this.renkCar}
                     >
                         马上租车
                     </Button>
                 </View>
+                <AtMessage />
             </View>
         )
     }
