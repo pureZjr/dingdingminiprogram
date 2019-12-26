@@ -51,6 +51,7 @@ function Login() {
                 url: '/container/pages/home/index',
             })
         } else {
+            setVerifyFromSMS('')
             return Taro.atMessage({
                 message: '验证码错误或过期请重新输入',
                 type: 'warning',
@@ -85,7 +86,7 @@ function Login() {
             })
         } else {
             Taro.atMessage({
-                message: '验证码错误，请重新获取',
+                message: res.message || '验证码错误，请重新获取',
                 type: 'error',
             })
         }
@@ -116,7 +117,6 @@ function Login() {
             if (!!res.token) {
                 await setItem('token', res.token)
                 const userInfo = await getCustomerInfo({})
-                console.log(userInfo)
                 UserStore.setUserInfo(userInfo)
                 Taro.navigateTo({
                     url: '/container/pages/home/index',
@@ -196,7 +196,12 @@ function Login() {
                             color="#ebcb22"
                             onClick={reload}
                         />
-                        <Image className={styles['img']} src={verifyPngUrl} />
+                        {!!verifyPngUrl && (
+                            <Image
+                                className={styles['img']}
+                                src={verifyPngUrl}
+                            />
+                        )}
                     </View>
                     <View className={styles['verify-png-input-container']}>
                         <Input

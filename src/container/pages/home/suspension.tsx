@@ -35,7 +35,10 @@ function Suspension(props: IProps) {
     }
     // 选择还车点
     const onHandleReturePosition = async () => {
-        await checkToken()
+        const hasLogin = await checkToken()
+        if (!hasLogin) {
+            return
+        }
         Taro.navigateTo({
             url: `/container/pages/selectReturnPosition/index?id=${
                 props.getPositionProps.id

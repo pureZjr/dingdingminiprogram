@@ -48,7 +48,7 @@ export default class Http {
                                 url: '/container/pages/login/index',
                             })
                         } else {
-                            resolve(null)
+                            resolve(res.data || null)
                         }
                         break
                     case 401:
