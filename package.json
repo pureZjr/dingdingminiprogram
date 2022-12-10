@@ -76,7 +76,7 @@
         "husky": "^3.0.3",
         "moment": "^2.24.0",
         "prettier": "^1.17.0",
-        "qs": "^6.7.0",
+        "qs": "^6.7.3",
         "sass-bem": "^2.6.5",
         "stylelint": "^9.9.0",
         "stylelint-prettier": "^1.0.6",
